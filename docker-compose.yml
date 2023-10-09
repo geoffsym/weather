@@ -1,0 +1,13 @@
+version: "3"
+services:
+    node:
+        container_name: weather
+        hostname: weater
+        image: node:latest
+        restart: unless-stopped
+        ports:
+            - "8084:3000"
+        volumes:
+            - ./:/home/node/app
+        working_dir: /home/node/app
+        command: "npm run start"
