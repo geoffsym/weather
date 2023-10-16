@@ -1,3 +1,31 @@
-Forecast for
+<h2>
+  Forecast for
+  {{ weatherResult.location.name }}
+</h2>
 
-{{ city }}
+<div ng-repeat="w in weatherResult.forecast.forecastday">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            {{ w.date | date: "MMM d, y"}}
+          </h3>
+        </div>
+
+        <div class="panel-body">
+          <p>
+            High:
+            {{ w.day.maxtemp_f }}°F
+          </p>
+          <p>
+            Low:
+            {{ w.day.mintemp_f }}°F
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
