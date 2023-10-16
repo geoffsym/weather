@@ -44,7 +44,7 @@ weatherApp.controller("forecastController", [
     function ($scope, $resource, $routeParams, cityService) {
         $scope.city = cityService.city;
 
-        $scope.days = $routeParams.days || 5;
+        $scope.days = $routeParams.days || "2";
 
         $scope.weatherAPI = $resource(
             "http://api.weatherapi.com/v1/forecast.json?key=65c096c37d0b483c9a9184556231610",
