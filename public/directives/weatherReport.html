@@ -1,0 +1,20 @@
+<div class="panel panel-default">
+
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      {{ weatherDay.date | date: dateFormat}}
+    </h3>
+  </div>
+
+  <div class="panel-body">
+    <p>
+      High:
+      {{ weatherDay.day.maxtemp_f }}°F
+    </p>
+    <p>
+      Low:
+      {{ weatherDay.day.mintemp_f }}°F
+    </p>
+  </div>
+
+</div>
